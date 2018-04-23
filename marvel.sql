@@ -60,6 +60,7 @@ INSERT INTO movies (title, year, show_time) VALUES ('Ant-Man', 2015, '13:50');
 INSERT INTO movies (title, year, show_time) VALUES ('Captain America: Civil War', 2016, '21:30');
 INSERT INTO movies (title, year, show_time) VALUES ('Doctor Strange', 2016, '17:55');
 
+
 INSERT INTO attendances (person_id, movie_id) VALUES (2, 13);
 INSERT INTO attendances (person_id, movie_id) VALUES (22, 7);
 INSERT INTO attendances (person_id, movie_id) VALUES (12, 9);
@@ -149,3 +150,27 @@ INSERT INTO attendances (person_id, movie_id) VALUES (12, 2);
 INSERT INTO attendances (person_id, movie_id) VALUES (5, 8);
 INSERT INTO attendances (person_id, movie_id) VALUES (1, 1);
 INSERT INTO attendances (person_id, movie_id) VALUES (21, 4);
+
+DELETE FROM movies WHERE title = 'Batman Begins';
+
+INSERT INTO people (name) VALUES ('Sandy');
+
+DELETE FROM people WHERE name = ('Zsolt Podoba-Szalai');
+
+UPDATE people SET name = ('Jeff 4') WHERE name = ('Andrew Laughlin');
+UPDATE people SET name = ('Jeff 5') WHERE name = ('Andrew Smith');
+
+SELECT * FROM people
+
+INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '00:00');
+
+UPDATE movies SET show_time = ('21:30') WHERE title = ('Guardians of the Galaxy');
+
+
+
+
+SELECT * FROM movies
+
+
+
+--
