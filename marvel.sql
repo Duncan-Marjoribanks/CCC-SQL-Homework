@@ -20,6 +20,21 @@ CREATE TABLE attendances (
 	movie_id INT REFERENCES movies(id) ON DELETE CASCADE
 );
 
+DROP TABLE movies;
+DROP TABLE people;
+
+CREATE TABLE movies (
+	id SERIAL8 PRIMARY KEY,
+	title VARCHAR(255),
+	year INT2,
+	show_time VARCHAR(255)
+);
+
+CREATE TABLE people (
+	id SERIAL8 PRIMARY KEY,
+	name VARCHAR(255)
+);
+
 INSERT INTO people (name) VALUES ('Euan Bell');
 INSERT INTO people (name) VALUES ('Pauline Cairns');
 INSERT INTO people (name) VALUES ('Yang Chen');
@@ -160,13 +175,16 @@ DELETE FROM people WHERE name = ('Zsolt Podoba-Szalai');
 UPDATE people SET name = ('Jeff 4') WHERE name = ('Andrew Laughlin');
 UPDATE people SET name = ('Jeff 5') WHERE name = ('Andrew Smith');
 
-SELECT * FROM people
+SELECT * FROM people;
+
+-- INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '23:59');
 
 INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '00:00');
 
+
 UPDATE movies SET show_time = ('21:30') WHERE title = ('Guardians of the Galaxy');
 
-
+-- UPDATE movies SET (title, year, show_time)=('Guardians of the Galaxy 2',  2017, '00:00') WHERE title = ('Batman Begins');
 
 
 SELECT * FROM movies
